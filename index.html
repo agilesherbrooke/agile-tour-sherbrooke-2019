@@ -252,8 +252,6 @@
       background: #294350 !important;
       color: white !important;
       cursor: pointer;
-      position: relative;
-      transform: scale(1.0125);
  }
   main .summary table td.clickable:not(.keynote) {
       height: 220px;
@@ -486,6 +484,63 @@
  .keynote-text, .bolder {
    font-weight: bolder;
  }
+
+
+
+ .modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+ }
+  .modal-window.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-window > div {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: #ffffff;
+    color: #333333;
+  }
+
+  header {
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+    color: #333333;
+  }
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+    .modal-close:hover {
+    color: #000;
+  }
     </style>
   </head>
   <body>
@@ -544,6 +599,161 @@
                 <p>Nous devrions être en mesure de publier les détails des conférences retenues à partir
                   de la semaine du <b>17 mars 2019</b>. Restez des nôtres!
                 </p>
+
+                <div class="table-container">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Salle Sherweb</th>
+                          <th>Salle Sherbrooke Innopole</th>
+                          <th>Salle Université de Sherbrooke</th>
+                          <th>Atelier</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>9&nbsp;h à 10&nbsp;h&nbsp;30</td>
+                          <td class="keynote clickable" colspan="4" onclick='openModal(event)'>
+                            <div>
+                              <div class="title">Omnimed, une entreprise inspirante de la région de l’Estrie.</div>
+                              <div class="presenter">Xavier Boilard</div>
+                              <div class="company">Omnimed</div>
+                            </div>
+                            <div id="open-modal" class="modal-window">
+                                <div>
+                                  <a onclick='closeModal(event)' class="modal-close">Fermer</a>
+                                  <h1>Voilà!</h1>
+                                  <div>
+                                      A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only moA CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. dal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. A CSS-only modal based on the :target pseudo-class.
+                                       Hope you find it helpful. 
+                                       </div>
+                                  </div>
+                              </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10 h 30 à 10 h 45</td>
+                          <td colspan="4">Pause</td>
+                        </tr>
+                        <tr>
+                          <td>10 h 45 à 12 h 00</td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">Faciliter le passage d'une organisation réactive à créative</div>
+                              <div class="presenter">Dave Jacques et Gilles Duchesne</div>
+                              <div class="company">Pyxis</div>
+                            </div>
+                          </td>
+                          <td class="clickable">
+                            <div class="title" style="color: #888;"><em>À venir</em></div>
+                          </td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">DDD et programmation fonctionnelle : des alliés naturels</div>
+                              <div class="presenter">Olivier Lafleur</div>
+                              <div class="company">Elapse</div>
+                            </div>
+                          </td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">Kanban: livrer plus vite sans noyer vos équipes</div>
+                              <div class="presenter">Éric Lessard et Alex Bergeron</div>
+                              <div class="company">Facilité</div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12 h 00 à 13 h 00</td>
+                          <td colspan="4">Dîner</td>
+                        </tr>
+                        <tr>
+                          <td>13 h 00 à 14 h 15</td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">Lean Café: Jasons peu, mais jasons bien!</div>
+                              <div class="presenter">Mathieu Boisvert</div>
+                              <div class="company">Agile Sherbrooke</div>
+                            </div>
+                          </td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">Quand les contributeurs tardent à contribuer: les silos organisationnels qui freinent souvent la vélocité des équipes.</div>
+                              <div class="presenter">Nathalie Ferron</div>
+                              <div class="company">Levio</div>
+                            </div>
+                          </td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">Fatigué(e)s de mijoter les mêmes recettes ? Portez l’esprit d’innovation à ébullition !</div>
+                              <div class="presenter">Valery Germain</div>
+                              <div class="company">Facilité</div>
+                            </div>
+                          </td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">Atelier de User Story Mapping</div>
+                              <div class="presenter">Christian Bélisle et Luc St-Laurent</div>
+                              <div class="company">Pyxis</div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14h15 à 14h30</td>
+                          <td colspan="4">Pause</td>
+                        </tr>
+                        <tr>
+                          <td>14h30 à 15h45</td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">Ce que Scrum n’est pas</div>
+                              <div class="presenter">Jean-Francois Morel</div>
+                              <div class="company">Coveo</div>
+                            </div>
+                          </td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">Livrer de la valeur en production à chaque itération grâce à l’intégration et au déploiement en continu (CI/CD)</div>
+                              <div class="presenter">Benoit St-Andre</div>
+                              <div class="company">PMC Tire</div>
+                            </div>
+                          </td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">10 erreurs fréquentes à éviter pour un Product Owner</div>
+                              <div class="presenter">Mohamed Arezki </div>
+                              <div class="company"></div>
+                            </div>
+                          </td>
+                          <td class="clickable">
+                            <div>
+                              <div class="title">Management 3.0 par la pratique</div>
+                              <div class="presenter">Jean-Marie Perrono</div>
+                              <div class="company">Levio</div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>15h45 à 16h00</td>
+                          <td class="closure" colspan="4">Mot de la fin</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
               </div>
             </div>
             <div class="col-sm-12 col-md-4">
@@ -593,5 +803,29 @@
       </div>-->
     </main>
     <footer></footer>
+    <script>
+        function openModal(event) {
+            event && event.stopPropagation();
+
+            closeModal()
+            
+            var target = event.currentTarget
+            var description = target.children[1]
+            
+            if(description) {
+                description.classList.add('show')
+            }
+        }
+
+        function closeModal(event) {
+            event && event.stopPropagation();
+
+            var description = document.querySelector('.show');
+            
+            if(description) {
+                description.classList.remove('show');
+            }
+        }
+    </script>
   </body>
 </html>
