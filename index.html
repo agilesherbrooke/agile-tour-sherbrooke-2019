@@ -307,6 +307,27 @@
       font-size: 11px;
       opacity: 0.69;
  }
+
+     td.clickable {
+       padding: 0 !important;
+     }
+
+      td.clickable a  {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      td.clickable a > div {
+        padding: 4px 8px;
+      }
+
+      td.clickable a div div {
+        padding: 2px;
+      }
+
   main .summary .include {
       margin-top: 2rem;
  }
@@ -462,11 +483,14 @@
                   <i class="material-icons icon-margin">schedule</i>Horaire des conférences
                 </h1>
                 <p>
-                  Nous sommes présentement en train de concevoir l'horaire des conférences, celle-ci devrait
-                  donc être disponible sous peu! Toutefois, afin de vous faire patienter, quelques conférences sont déjà annoncées sur la
-                  <a class="bold" href="liste-conferences.html">liste des conférences</a>.
-                    Restez des nôtres!
+                    Une journée remplie de découvertes vous attend. 
+                    Que ce soit pour entendre un résumé sur l'<span class="bold">état de l'art de l'agilité</span> en 2019, 
+                    pour écouter <span class="bold">un dirigeant d'entreprise</span> de la région nous partager sa passion, 
+                    ou d'assister à <span class="bold">4 conférences</span> parmi un choix de <span class="bold">16 conférences</span> réparties sur 4 thèmes, 
+                    vous y trouverez des sujets qui vous interpellent.
                 </p>
+                <p>Pour la liste complète, rendez-vous sur la <a class="bold" href="liste-conferences.html">liste des conférences</a>.</p>
+                <p class="bold">* Cliquez sur une conférence dans le tableau pour obtenir plus d'informations sur celle-ci.</p>
 
                 <div class="table-container">
                     <table>
@@ -476,7 +500,7 @@
                           <th>Salle Sherweb</th>
                           <th>Salle Sherbrooke Innopole</th>
                           <th>Salle Université de Sherbrooke</th>
-                          <th>Atelier</th>
+                          <th>Salle CGI</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -486,7 +510,7 @@
                         </tr>
                         <tr>
                           <td>9&nbsp;h&nbsp;30</td>
-                          <td colspan="4"><div class="title forthcoming">Keynote - À venir</div></td>
+                          <td colspan="4"><div class="title">Keynote par Alan Kezber - Prendre le virage Agile</div></td>
                         </tr>
                         <tr>
                           <td>10&nbsp;h&nbsp;15</td>
@@ -494,10 +518,10 @@
                         </tr>
                         <tr>
                           <td>10&nbsp;h&nbsp;30</td>
-                          <td><div class="title forthcoming">À venir</div></td>
-                          <td><div class="title forthcoming">À venir</div></td>
-                          <td><div class="title forthcoming">À venir</div></td>
-                          <td><div class="title forthcoming">À venir</div></td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#Jean-FrançoisMorel"><div><div class="title">User Stories - Guide de création et de découpage</div><div class="presenter">Jean-François Morel</div><div class="company">Coveo</div></div></a></td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#CaroleRudzinski"><div><div class="title">Soyez créatif : Questionnez autrement</div><div class="presenter">Carole Rudzinski</div><div class="company">carolerudzinski.com</div></div></a></td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#Marc-AndreGaudreau_MartinBrochu"><div><div class="title">Transformation agile à l’Université de Sherbrooke (au STI)</div><div class="presenter">Marc-André Gaudreau et Martin Brochu</div><div class="company">Université de Sherbrooke</div></div></a></td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#PawelMysliwiec"><div><div class="title">Transformation organisationnelle Agile - Culture d'apprentissage en continu</div><div class="presenter">Pawel Mysliwiec</div><div class="company">Pyxis</div></div></a></td>
                         </tr>
                         <tr>
                           <td>11&nbsp;h&nbsp;45</td>
@@ -505,10 +529,10 @@
                         </tr>
                         <tr>
                           <td>12&nbsp;h&nbsp;45</td>
-                          <td><div class="title forthcoming">À venir</div></td>
-                          <td><div class="title forthcoming">À venir</div></td>
-                          <td><div class="title forthcoming">À venir</div></td>
-                          <td><div class="title forthcoming">À venir</div></td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#ChristianDroulers"><div><div class="title">Faire évoluer un logiciel existant avec le Domain-Driven Design et l'Event Sourcing</div><div class="presenter">Christian Droulers</div><div class="company">Akinox Solutions</div></div></a></td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#David-AlexandrePaquette"><div><div class="title">LEGO® SERIOUS PLAY® En mode Agile - Jouer sérieusement en toute agilité</div><div class="presenter">David-Alexandre Paquette</div><div class="company">IndustriousGeek</div></div></a></td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#DanielGiroux"><div><div class="title">Agile : Le triangle d’or ou comment engager le client (interne ou externe)</div><div class="presenter">Daniel Giroux</div><div class="company">Axial</div></div></a></td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#SophieBenjamin"><div><div class="title">D’une équipe de tests à une chaîne de qualité organisationnelle!</div><div class="presenter">Sophie Benjamin</div><div class="company">Kezber</div></div></a></td>
                         </tr>
                         <tr>
                           <td>14&nbsp;h&nbsp;00</td>
@@ -516,10 +540,10 @@
                         </tr>
                         <tr>
                           <td>14&nbsp;h&nbsp;15</td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#OlivierLafleur"><div><div class="title">DevOps et déploiement continu : on commence comment?</div><div class="presenter">Olivier Lafleur</div><div class="company">Elapse Technologies</div></div></a></td>
                           <td><div class="title forthcoming">À venir</div></td>
-                          <td><div class="title forthcoming">À venir</div></td>
-                          <td><div class="title forthcoming">À venir</div></td>
-                          <td><div class="title forthcoming">À venir</div></td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#MohamedArezki"><div><div class="title">Agilité avec des équipes de composantes logiciels</div><div class="presenter">Mohamed Arezki</div><div class="company">Banque Nationale</div></div></a></td>
+                          <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#DaveJacques"><div><div class="title">Ce projet dont vous êtes le héros</div><div class="presenter">Dave Jacques</div><div class="company">Simplement Complexe</div></div></a></td>
                         </tr>
                         <tr>
                             <td>15&nbsp;h&nbsp;30</td>
@@ -527,10 +551,10 @@
                           </tr>
                           <tr>
                               <td>15&nbsp;h&nbsp;45</td>
-                              <td><div class="title forthcoming">À venir</div></td>
-                              <td><div class="title forthcoming">À venir</div></td>
-                              <td><div class="title forthcoming">À venir</div></td>
-                              <td><div class="title forthcoming">À venir</div></td>
+                              <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#EricVeilleux"><div><div class="title">99 façons de garder le contrôle sur vos tests</div><div class="presenter">Eric Veilleux</div><div class="company">SherWeb</div></div></a></td>
+                              <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#FannyDesjardins_ValeryGermain"><div><div class="title">Sortez l'innovation de la boîte!</div><div class="presenter">Fanny Desjardins et Valéry Germain</div><div class="company">CGI|Facilité</div></div></a></td>
+                              <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#AlexandreBeaudet"><div><div class="title">Le UX, est-ce vraiment utile? Le UX vu par un PO</div><div class="presenter">Alexandre Beaudet</div><div class="company">Université de Sherbrooke</div></div></a></td>
+                              <td class="clickable"><a rel="noopener" target="_blank" href="liste-conferences.html#DamienBeaufils_DenisMigot"><div><div class="title">3 phases et 10 ateliers pour lancer puis maintenir un projet sain</div><div class="presenter">Damien Beaufils et Denis Migot</div><div class="company">Zenika</div></div></a></td>
                             </tr>
                         <tr>
                           <td>17&nbsp;h</td>
